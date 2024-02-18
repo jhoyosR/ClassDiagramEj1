@@ -1,15 +1,16 @@
 package sistemaCreditoEj1;
 
-public class Credito extends SolicitudCredito {
+public class Credito {
     private String estado;
 
-    public Credito(String nombre, String id, String direccion, String historialCrediticio, int ingresos, String tipoCredito, int monto, String plazo, double tasaInteres, String estado) {
-        super(nombre, id, direccion, historialCrediticio, ingresos, tipoCredito, monto, plazo, tasaInteres);
-        this.estado = estado;
+    SolicitudCredito creditoAsociado;
+
+    public Credito(SolicitudCredito creditoAsociado) {
+        this.creditoAsociado = creditoAsociado;
     }
 
-    public void obtenerSolicitudCredito(){
-        //????//
+    public Object obtenerSolicitudCredito(){
+        return this.creditoAsociado;
     }
 
     public String getEstado() {

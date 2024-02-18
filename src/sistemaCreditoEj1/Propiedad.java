@@ -4,6 +4,11 @@ public class Propiedad {
     private String direccion;
     private int valor;
 
+    public Propiedad(String direccion, int valor) {
+        this.direccion = direccion;
+        this.valor = valor;
+    }
+
     public String getDireccion() {
         return direccion;
     }
